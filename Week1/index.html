@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="J LONGROY">
+    <meta name="description" content="Week 1 Demo">
+    
+    <title>Document</title>
+</head>
+<body>
+    <!--the body holds ALL CONTENT for the page-->
+    <!--this is a comment in HTML-->   
+
+    <!--heading tags are Block Level Elements (BLEs)-->
+    <!--BLEs create structure for a page - they are literal blocks /
+    rectangles; start on a new left hand aligned  line-->
+    <h1 style="border:1px solid red;">Heading 1</h1><!--ONE h1 per page; content supports SEO-->
+    <h2 style="border:1px solid blue;">Heading 2</h2>
+    <h3 style="border:1px solid green;">Heading 3</h3>
+    <h4 style="border:1px solid yellow;">Heading 4</h4>
+    <h5 style="border:1px solid orange;">Heading 5</h5>
+
+    <!--horizontal rule - self closing; spits out a BLE line-->
+    <hr>
+
+    <!--LISTS! we have ordered (numbered) and unordered (bulleted)-->
+    <!--lists require: a type of list AND list items-->
+
+    <h2>Favorite Monsters</h2>
+
+    <ol><!--ordered list type-->
+        <li>Skeleton</li>
+        <li>Dragon</li>
+        <li>Ghoul</li>
+        <li>Goblin</li>
+        <li>Reapers</li>
+    </ol>
+    
+    <h2>My Hobbies</h2>
+
+    <ul><!-- unordered list type-->
+        <li>Riding Bikes</li>
+        <li>Video Games</li>
+        <li>Making Music</li>
+        <li>Hanging with Friends</li>
+        <li>Camping</li>
+    </ul>
+
+    <hr>
+
+    <h2>Parageraph Tags - for body text content</h2>
+
+    <p>Hello world! This is my first paragraph tag! I am trying out some extra words to showcase how this Black Level Element operates/looks inside of a browser page. More words and things. 
+        
+        <br><!--break space; create space inbetween-->
+        <br>
+        <br><br><br>
+
+        Hello, anyway, goodbye.</p>
+
+        <hr>
+
+        <h2>Divs - divs (divisions/dividers) create sections of content; the ONLY hold *other HTML elements* (never text content on its own)</h2>
+
+        <div style="border:1px solid grey; background-color: black; font-family: Helvetica; color: white;">
+            <h4>About Me</h4>
+
+            <p>Hi my name is Joe and I LOVE <i><b>BORGS</b></i> (and frenchie frieu)</p>
+
+        </div>
+
+        <hr>
+
+        <!--image tag, IMAGE! are considered BOTH incline AND block level XD-->
+        <!--we will primarily use them as BLEs-->
+
+        <img src="https://d2luv1saso99wi.cloudfront.net/2022_Digital-Menu_Burgers_ShackBurger_1500x920_lg1663589553.jpeg" alt="One Borg from Shakeshack" width="500">
+        <!--above is an example of an ABSOLUTE image path [boooooooooooooo]-->
+
+        <!--relative file paths are BEST! these live directly within the root folder-->
+        <img src="images/2borgs.jpg" alt="Two Borgs from Shakeshack" width="500">
+
+        <!--IMG requires 2 attributes:
+            *src > file path to image
+            *alt > alternative text; what is read on screenreaders, supports SEO and appears if the file paht is broken-->
+        
+        <img src="images/3borgs.jpg" alt="Three Borgs from Shakeshack" width="500">
+
+        <hr>
+
+        <h2>Hypertext Links</h2>
+
+        <p>Hypertext Links give us access to <a href="https://www.google.com"> </a>other</a> pages! They are known as the <i>anchor tag.</i></p>
+
+
+
+</body>
+</html>
