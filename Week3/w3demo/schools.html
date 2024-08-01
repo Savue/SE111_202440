@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+
+    <style>
+        /*in here write CSS*/
+
+        div {
+            /*ALL div elements on THIS page will take the following styling*/
+            border:1px solid black;
+            padding:10px; /*adds space between element content and border*/
+            margin:10px; /*adds space between border of element and next element*/
+        }
+        
+        #wrapper {
+            width:990px;
+            margin:auto; /*MUST have a width set; ceneters element w/ equal L and R space in page*/
+            background-color: darkgray;
+        }
+
+        #nav {
+            background-color: white;
+        }
+
+        .bg {
+            background-color: black;
+            color: white;
+        }
+
+        .fancy {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div id="header" class="bg">
+        
+        <h1 class="fancy">Hello Multipage Demo</h1>
+        
+        </div><!---header-->
+
+        <div id="nav">
+
+            <div id="buttons">
+
+                <a href="index.html">ABOUT</a>
+                <a href="schools.html">SCHOOLS</a>
+                <a href="hobbies.html">HOBBIES</a>
+
+            </div>
+
+        </div><!---nav-->
+        
+        <div id="content">
+
+            <h2 class="fancy">This is the <b>SCHOOLS</b> page.</h2>
+
+        </div><!---content-->
+
+        <div id="footer" class="bg">
+
+            <p class="fancy">&copy; J LONGROY | SE111 | 202440</p>
+
+            <!---MAKE A VALIDATON SCREENSHOT FOR THIS PAGE-->
+
+        </div><!---footer-->
+
+    </div>
+    
+</body>
+</html>
