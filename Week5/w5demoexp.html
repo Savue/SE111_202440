@@ -7,18 +7,17 @@
     <title>W5D1 - Forms & Tables Demo</title>
 
     <style>
-        table, tr, td, form {
+        table, tr, td {
             border:1px solid black
         }
     </style>
 
-
 </head>
-
 <body>
     <h1>Basic Form Demo</h1>
 
     <h2>Form w/o Table</h2>
+
 
     <!--text fields for manual entry by user - value becomes what user types into box before submitting-->
 
@@ -59,6 +58,17 @@
         <table>
             <!--<thead> an be used for column headers-->
 
+                <thead><!---inclass added-->
+
+                    <tr>
+                        <td>
+                            <h2>Questions</h2>
+                        </td>
+                        
+                    </tr>
+
+                </thead>
+
             <!--<tbody> is REQUIRED inside of the <table>-->
                 <tbody>
                     <tr><!--table ROW; should include one <td> for every possible column, leave blank when no info for that row-->
@@ -88,6 +98,19 @@
                     <tr>
 
                         <td>
+                            <label for="age">Age</label>
+                        </td>
+
+                        <td>
+                            <input type="number" name="age" id="age">
+                        </td>
+                    
+                    
+                    </tr>
+
+                    <tr>
+
+                        <td>
                             <label for="email">Email:</label>
                         </td>
 
@@ -98,19 +121,22 @@
                     </tr>
 
                     <tr>
-                            <!---TEXT BOX-->
+                        <td>
+                            <input type="submit" value="SUBMIT">
+                        </td>
+                    </tr>
+
+                    <tr>
+
                         <td>
                             <label for="comments">Comments:</label>
                         </td>
 
                         <td>
-                            <textarea name="comments" id="comments" rows="10" cols="21" placeholder="Your text goes here" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"></textarea>
+                            <textarea name="comments" rows="10" cols="21" placeholder="Your comments here....">You can populate the textbox but user will need to delete</textarea>
                         </td>
-                       
 
                     </tr>
-
-
 
                     <!--non text input elements-->
                     <!--
@@ -126,13 +152,11 @@
                             <!--similar to list types: containing element and then indiv options from menu-->
 
                             <!--each option must have a value attribute so data can be passed from form accurately-->
-                            <select name="faveColor" id="faveColor">
+                            <select name="faveColor">
 
-                                <!---new option for each item in drop down-->
-
-                                <option value="blue">BLUE</option>
-                                <option value="pink">PINK</option>
-                                <option value="orange">ORANGE</option>
+                                <option value="red">Red</option>
+                                <option value="orange">Orange</option>
+                                <option value="yellow">Yellow</option>
                                 
                             </select>
                         </td>
@@ -145,11 +169,10 @@
                             <label for="study">Program of Study:</label>
                         </td>
 
-                            <!---Name values being the same allows only one option being chosen at a time by the user-->
                         <td>
                             <input type="radio" name="study" value="SE">Software Engineering <br>
                             <input type="radio" name="study" value="CYB">Cybersecurity <br>
-                            <input type="radio" name="study" value="NE">Network Engineering <br> 
+                            <input type="radio" name="study" vaue="NE">Network Engineering <br> 
                             <input type="radio" name="study" value="WD">Web Development
                         </td>
                     </tr>
@@ -162,8 +185,8 @@
 
                         <td>
                             <input type="checkbox" name="vehicle1" value="car">Car 
-                            <input type="checkbox" name="vehicle2" value="liger">Liger
-                            <input type="checkbox" name="vehicle3" value="its not just a boulder its a">Rock
+                            <input type="checkbox" name="vehicle2" value="ship">Ship
+                            <input type="checkbox" name="vehicle3" value="horse">Horse
                         </td>
                     </tr>
 
