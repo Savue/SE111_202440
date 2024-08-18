@@ -17,32 +17,312 @@
 
     
     <style>
-        table, tr, td, form {font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
+        table, tr, td, form, h1, h2{font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             border:1px solid black
         }
+
+        .bg {
+            background-color: solid black;
+            color: rgb(141, 0, 0);
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+        #wrapper {
+            background-color: rgb(195, 195, 195);
+        }
+
     </style>
 
 
 </head>
 
 <body>
+
+<div id="wrapper">
+
     <!--Build your Table and Form here-->
 
-    <h1>Dirt Bike Options Form</h1>
+    <h1><b>Dirt Bike Options Form</b></h1>
+
+    <h3><i>Made By Joseph Longroy</i></h3>
 
     <form>
         <table>
             <tbody>
                 <tr>
-                    <td>
-                        <label for="firstName">Parent/Guardian Name:</label>
-                    </td>
+
+                    <tr>
+                    
+                        <td>
+
+                            <p>Questions</p>
+
+                        </td>
+
+                        <td>
+
+                            <p>Answer Slots</p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                    
+                        <td><!--start of form first data on left-->
+
+                            <label for="firstName" class="bg">Parent/Guardian First Name:</label>
+
+                        </td>
+
+                        <td><!--second data cell in row-->
+
+                            <input type="text" id="firstName" name="firstName" maxlength="100" required>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <label for="lastName" class="bg">Parent/Guardian Last Name</label>
+
+                        </td>
+
+                        <td>
+
+                            <input type="text" id="lastName" name="lastName" maxlength="100" required>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><!--first data on left-->
+                            
+                            <label for="childName" class="bg">Child's First Name:</label>
+
+                        </td>
+
+                        <td><!--second data cell in row-->
+                            
+                            <input type="text" id="childName" name="childName" maxlength="100" required>
+                        
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><!--first data on left-->
+                            
+                            <label for="childAge" class="bg">Child's Age:</label>
+
+                        </td>
+
+                        <td><!--second data cell in row-->
+                            
+                            <input type="number" id="childAge" name="childAge" maxlength="100" required>
+                        
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                    
+                        <td>
+
+                            <p>Date - Time - History</p>
+
+                        </td>
+
+                        </tr>
+
+                    <tr>
+                    
+                        <td><!--first data on left-->
+    
+                            <label for="date" class="bg">Date:</label>
+    
+                        </td>
+    
+                        <td><!--second data cell in row-->
+    
+                            <input type="date" id="date" name="date" required>
+    
+                        </td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td>
+    
+                            <label for="arrival" class="bg">Arrival Time</label>
+    
+                        </td>
+    
+                        <td>
+    
+                            <input type="time" id="time" name="time" required>
+    
+                        </td>
+    
+                    </tr>
+
+                    <tr>
+    
+                        <td>
+        
+                             <label for="experience" class="bg">Years of Experience:</label>
+        
+                        </td>
+        
+                        <td>
+        
+                            <input type="text" id="experience" name="experience" required>
+        
+                        </td>
+        
+                    </tr>
+
+                    <tr>
+                    
+                        <td>
+            
+                            <p>Manufacturer - Details</p>
+            
+                        </td>
+            
+                    </tr>
+            
+                    <tr>
+                                
+                        <td><!--first data on left-->
+                
+                            <label for="brand" class="bg">Brand:</label>
+                
+                        </td>
+                
+                        <td><!--second data cell in row-->
+                
+                            <input type="checkbox" name="vehicle1" value="yamaha">Yamaha
+                            <input type="checkbox" name="vehicle2" value="honda">Honda
+                            <input type="checkbox" name="vehicle3" value="kawasaki">Kawasaki
+                            <input type="checkbox" name="vehicle4" value="sazuki">Sazuki
+                            <input type="checkbox" name="vehicle5" value="ktm">KTM
+                            <input type="checkbox" name="vehicle6" value="gasgas">GasGas
+
+                        </td>
+                
+                    </tr>
+                
+                    <tr>
+                
+                        <td>
+                
+                            <label for="engine" class="bg">Engine Size</label>
+                
+                        </td>
+                
+                        <td>
+                
+                            <input type="radio" name="engine" value="125cc">125cc <br>
+                            <input type="radio" name="engine" value="250cc">250cc <br>
+                            <input type="radio" name="engine" value="450cc">450cc <br> 
+                            <input type="radio" name="engine" value="500cc">500cc
+                
+                        </td>
+                
+                    </tr>
+            
+                    <tr>
+                
+                        <td>
+                            <label for="year" class="bg">Preferred Year:</label>
+                        </td>
+
+                        <td>
+                            <!--similar to list types: containing element and then indiv options from menu-->
+
+                            <!--each option must have a value attribute so data can be passed from form accurately-->
+                            <select name="year" id="year" required>
+
+                                <!---new option for each item in drop down-->
+
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="na">Does Not Matter.</option>
+                                
+                            </select>
+                    
+                        </td>
+                    
+                    </tr>
+
+                    <tr>
+                    
+                        <td><!--first data on left-->
+    
+                            <label for="color" class="bg">Aftermarket Plastic Color:</label>
+    
+                        </td>
+    
+                        <td><!--second data cell in row-->
+    
+                            <p>Color Picker</p>
+                            <input type="color" id="color" name="color" required>
+    
+                        </td>
+    
+                    </tr>
+
+                    <tr>
+                    
+                        <td>
+
+                            <p>Other</p>
+
+                        </td>
+
+                        </tr>
+
+                    <tr>
+                    
+                        <td><!--first data on left-->
+    
+                            <label for="comments" class="bg">Exra Comments:</label>
+    
+                        </td>
+    
+                        <td><!--second data cell in row-->
+    
+                            <textarea name="comments" id="comments" rows="10" cols="21" placeholder="Your text goes here:"></textarea>
+    
+                        </td>
+    
+                    </tr>
+
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+                            <input type="submit" value="SUBMIT">
+                        </td>
+                    </tr>
+
                 </tr>
             </tbody>
         </table>
     </form>
 
-
+</div>
     
 </body>
 
