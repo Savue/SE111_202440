@@ -14,6 +14,9 @@
     <!--here is the HTML elements when getting started-->
     <h1>Week 6 Intro Demo | Javascript</h1>
 
+    <!--show use of button element with onclick-->
+    <button onclick="hello()">Say Hi :]</button>
+
     <!--In-Document Javascript at the END of HTML content, before the body is closed-->
     <script>
         //single line comment in JS
@@ -51,7 +54,7 @@
 
         //-------------------------------------------------------
 
-                //Number makes sure that hours is known as a number, for example so you can use .toFixed, if its not considered a number itll error
+                //Number makes sure that hours is known as a number, for example so you can use .toFixed, if its not considered a number it'll error
         var hours = Number(prompt(`Enter your hours worked: `))
 
         var gross = hours * 15
@@ -61,6 +64,28 @@
         var net = gross - taxA
 
         console.log(`${hours.toFixed(1)} * 15 = $ ${gross.toFixed(2)}`)
+
+       //---------------------------------------------------------
+       
+        //CONDITIONS IN JAVASCRIPT
+
+        var num = Number(prompt(`Enter a number: `))
+
+        if (num % 2 === 0)
+        {
+            alert(`The number is EVEN!`)
+        }
+        else
+        {
+            alert(`The number is ODD!`)
+        }
+
+        function hello()
+        {
+            console.log(`button clicked!`)
+            alert(`Hello World!`)
+        }
+
     </script>
 
 
