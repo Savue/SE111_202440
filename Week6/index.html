@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joseph Longroy">
+    <meta name="description" content="Week 6 Java Demo">
+
+    <title>W6 | JS Intro</title>
+
+</head>
+<body>
+    
+    <!--here is the HTML elements when getting started-->
+    <h1>Week 6 Intro Demo | Javascript</h1>
+
+    <!--In-Document Javascript at the END of HTML content, before the body is closed-->
+    <script>
+        //single line comment in JS
+
+        //create some variables ---> requires DECLARATION: keyword 'var'
+        //so unlike Python, you can't just type num1 = 10, you need to state its a variable
+        var num1 = 10
+        var num2 = 27
+
+        var sum = num1 + num2
+
+        //console.log() -- used for development, not for the user
+        console.log(sum)
+        console.log(num1, num2, sum)
+        console.log("The sum of ", num1, "+", num2, "is", sum)
+        
+        //easier way to display, not so many ""s ---------.toFixed() is how to display a specific decimal placement
+        console.log(`The sum of ${num1} + ${num2} is ${sum.toFixed(2)}`)
+
+        
+        
+        //alert() allows for a pop-up in the browser page to display data, \n means new line
+        //alert() --> OUTPUT to the user [print()]
+        alert(`Hello World!\nThe sum is ${sum.toFixed(2)}`)
+
+        console.log(`alert complete.`)
+
+        //prompt() allows for a pop-up with a text box for data input by the user
+        //prompt() --> INPUT to the user [input()]
+        var name = prompt(`Enter your name: `)
+
+        console.log(`prompt complete: ${name}`)
+
+        alert(`Hi there ${name}!`)
+
+        //-------------------------------------------------------
+
+                //Number makes sure that hours is known as a number, for example so you can use .toFixed, if its not considered a number itll error
+        var hours = Number(prompt(`Enter your hours worked: `))
+
+        var gross = hours * 15
+
+        var taxA = gross * 0.2
+        
+        var net = gross - taxA
+
+        console.log(`${hours.toFixed(1)} * 15 = $ ${gross.toFixed(2)}`)
+    </script>
+
+
+
+</body>
+
+</html>
