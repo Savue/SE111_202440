@@ -9,7 +9,7 @@
     <meta name="author" content="Joseph Longroy">
     <meta name="description" content="W8D1 | Riddles & JS Demo">
 
-    <title>W8D1 | Widdles Demo</title>
+    <title>W8D1 | Riddles Demo</title>
     <!--W8D1 ACTIVITY GOAL:
         *to practice in-document Javascript
         *to write HTML content to the page using JS
@@ -94,12 +94,12 @@
         <div id="header">
 
             <!--***ADD YOUR NAME to the <h1> welcome banner below-->
-            <h1>Welcome to <br> [_YOUR_NAME_HERE_]'s <br> Riddles Page!</h1>
+            <h1>Welcome to <br> Joseph's <br> Riddles Page!</h1>
 
             <!--***EDIT THE HREF attribute to include your GitHub repo link-->
 
             <!--+1 BONUS POINT: instead of adding the href in the HTML line below, instead add the link via your in-document javascript - make it the first line inside of the <script></script>-->
-            <a id="gitHub-link" href="" target="_blank">Back to [_YOUR_NAME_HERE_]'s GitHub Repo!</a>
+            <a id="gitHub-link" href="" target="_blank">Back to Joseph's GitHub Repo!</a>
 
         </div><!--/ #header-->
 
@@ -152,9 +152,9 @@
             <!--***here is the reusable div, but empty for you to fill out with your first riddle-->
             <div id="q-3" class="question-div">
 
-                <h4>_RIDDLE_TITLE_</h4>
+                <h4>Movie Riddle</h4>
 
-                <p id="question3" class="question">_YOUR_FIRST_RIDDLE_HERE_</p>
+                <p id="question3" class="question">Middle Earth knows my power, in a fellowship's hour. Speak "friend" to enter, don’t make me glower. Who am I?</p>
 
                 <h6 id="answer3" class="answer" onclick="reveal(3)"><span class="hover-color">Click Here for Answer!</span></h6>
 
@@ -163,7 +163,16 @@
 
             <!--QUESTION #4-->
             <!--***for the final question, you're on your own ;] DON'T WORRY! You already have 4 examples above you on how to set it up!-->
+            <div id="q-4" class="question-div">
 
+                <h4>Military Riddle</h4>
+
+                <p id="question4" class="question">Crack my code; you'll find no flavor. My legacy's logic, a spy's major savior. What am I?</p>
+
+                <h6 id="answer4" class="answer" onclick="reveal(4)"><span class="hover-color">Click Here for Answer!</span></h6>
+
+                <hr>
+            </div>
 
 
 
@@ -184,27 +193,25 @@
     <!--IN-DOCUMENT JAVASCRIPT BELOW-->
     <script>
 
-        //***BONUS OPPORTUNITY: see line 97 8D
+        //extrraa cred
+        document.querySelector(`#gitHub-link`) += "https://se111-longroy-202440.netlify.app/"
 
 
         //declare some global variables to hold the answers to your riddles
         //naming convention: 'a' for answer, '#'' corresponds with the question #
         //we start at 0 in computer science!
         var a0 = "Patella! (Pat + Ella)"
-        var a1 = "A mouse! :_smiling_Douglas_Englebart_pic_:"
+        var a1 = "A mouse!"
         var a2 = "A stamp"
-
-        //***ADD YOUR OWN two riddle answers below
-        var a3
-        var a4
-
-        /*
+        var a3 = "Gandalf"
+        var a4 = "Enigma"
 
         //---W8 PRACTICING WITH ARRAYS-------------------------------------------------------------
         //below we are adding all of the answers into a new Array! (this is just for funsies)
         var answerChecks = new Array(a0, a1, a2, a3, a4)
 
-        
+        console.log(answerChecks[3])
+
         //view the answers in the console; we are using a for loop for this since we collected and stored all of the answers into an array, and now we can practice working with them
         //THIS WILL NOT WORK IF YOU HAVE NOT YET COMPLETED YOUR #3 and #4 RIDDLES CORRECTLY IN THE HTML!
         for (let i = 0; i < 5; i++){
@@ -214,7 +221,6 @@
 
         //-----------------------------------------------------------------------------------------
 
-        */
 
 
         //the below function is run when an <h6> with an onclick attribute [onclick="reveal(#)"] is clicked
@@ -240,6 +246,8 @@
             if (num === 0) {answer = a0}
             if (num === 1) {answer = a1}
             if (num === 2) {answer = a2}
+            if (num === 3) {answer = a3}
+            if (num === 3) {answer = a4}
 
             
             //***ADD IN two more if statements to assign the a3 and a4 values!
