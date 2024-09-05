@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joseph Longroy">
+
+    <title>W8 | Data Structures in JS</title>
+
+</head>
+<body>
+    
+    <!--HTML content-->
+    <h1>W8 Java Demo | Arrays and Objects</h1>
+
+    <div id="output">
+
+        <!--stuff will be here soon-->
+
+    </div>
+
+    <script>
+
+        //basic key + value pair --> variableName = dataValue
+        var name = `Joe`
+        console.log(`Variable: ${name}`)
+
+        //ARRAYS
+        //key --> [index] or [i]
+
+        //create a new and populate array
+        //to just create: var people = []
+        var people = [
+            `Joe`,
+            `Maya`,
+            `Bobby`,
+            `Kaitlyn`
+        ]
+
+        console.log(`Array: ${people}`) //entire collection of data
+        console.log(`Array: ${people[0]}`) //one value within the array
+        //arrayName[index] --> name + key = value
+        
+        console.log(`Array: ${people.length}`) //see an inherent value of a property of the array object; length --> # of items
+        console.log(`Array: ${people[people.length - 1]}`) //last person in array
+       
+        people[people.length] = `Colin`
+        console.log(`Array: ${people}`) //entire collection of data
+
+        //helpful native property for array types --> .push() adds 
+
+        //other things to do with push
+        //people.push(document.querySelector(`#first`).value)
+        //people.push(prompt(`What is the name you'd like to push?`))
+
+        people.push(`Rachel`)
+        console.log(`Array: ${people}`)
+
+        //PARALLEL ARRAYS
+        var color = [
+            `grey`,
+            `blue`,
+            `black`,
+            `green`,
+            `purple`
+        ]
+
+        //PROCESSING ARRAYS
+        
+        var age = []
+
+        //"process" & "data structure" --> FOR LOOP!
+        for(let i = 0; i < people.length; i++)
+    {
+        console.log(`INDEX: ${i}\n${people[i]}'s favorite color is ${color[i]}`)
+        age.push(
+            prompt(`How old is ${people[i]}: `)
+        )
+    }
+
+        for(let i = 0; i < people.length; i++)
+        {
+            console.log(`${people[i]} is ${age[i]} years old`)
+        }
+
+        //ADDING CONTENT TO HTML ON THIS PAGE
+
+    </script>
+</body>
+</html>
