@@ -146,8 +146,6 @@
                 <hr>
             </div>
 
-            <!--***ADD YOUR QUESTIONS/RIDDLES - you will need 2 to complete this assignment! google is your friend :] -->
-
             <!--QUESTION #3-->
             <!--***here is the reusable div, but empty for you to fill out with your first riddle-->
             <div id="q-3" class="question-div">
@@ -183,7 +181,7 @@
         <div id="footer">
 
             <!--***ADD YOUR NAME TO THE FOOTER-->
-            <p>&copy; [_YOUR_NAME_HERE_] | W8D1 | SE111 [202440]</p>
+            <p>&copy; Joseph Longroy | W8D1 | SE111 [202440]</p>
 
         </div><!--/ #footer-->
 
@@ -194,7 +192,7 @@
     <script>
 
         //extrraa cred
-        document.querySelector(`#gitHub-link`) += "https://se111-longroy-202440.netlify.app/"
+        document.querySelector(`#gitHub-link`).href = "https://se111-longroy-202440.netlify.app/"
 
 
         //declare some global variables to hold the answers to your riddles
@@ -226,6 +224,7 @@
         //the below function is run when an <h6> with an onclick attribute [onclick="reveal(#)"] is clicked
         //the 'num' parameter corresponds with the reveal(#) or # of the question; this helps map to the correct answer or 'a#'' 
         function reveal(num){
+            console.log(`reveal() called!`)
             //a locally decalred variable named 'answer'
             //this variable's value is only accessible *inside* of this function
             
@@ -247,7 +246,7 @@
             if (num === 1) {answer = a1}
             if (num === 2) {answer = a2}
             if (num === 3) {answer = a3}
-            if (num === 3) {answer = a4}
+            if (num === 4) {answer = a4}
 
             
             //***ADD IN two more if statements to assign the a3 and a4 values!
