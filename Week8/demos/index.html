@@ -83,6 +83,83 @@
             console.log(`${people[i]} is ${age[i]} years old`)
         }
 
+        //ASSOCIATIVe ARRAYS - instead of index, WE create a key string name index
+        var associativePeople = []
+        associativePeople[`first`] = `Joe`
+        associativePeople[`last`] = `Longroy`
+        associativePeople[`cat`] = `Kev`
+
+        //access a value with data structure --> name + key = value 
+        //standard array arrayName[index] = value
+        console.log(associativePeople[`cat`]) //displays 'Kev'
+
+
+        //OBJECTS---------------------------------------------------------------------------
+        //create a new object -- mixed data types of information that is all related to one main/core object
+        //object key --> property
+
+        var Seranna = {
+            name: "Seranna",
+            race: "Half-Elf",
+            classtype: "Warlock",
+            lvl: 8, 
+            familiar: {},
+            hp: 10,
+            ac: 20,
+            items: {},
+           
+            //functions stored as a property in an object --> .METHOD()
+            greeting: function() {
+                alert(`Hi there ${this.name}`)
+            }
+        }
+
+        //access single value within object -- DOT SYNTAX
+        //object.property -- REMEMBER: property is key to accessing value 
+        console.log(Seranna.greeting())
+
+
+
+        var Lolli = {
+            name: "Lolli",
+            race: "Demon",
+            classtype: "Warrior",
+            lvl: 11, 
+            familiar: {},
+            hp: 150,
+            ac: 20,
+            items: {},
+        }
+
+        //lets put it all together
+        var party = [
+            Seranna,
+            Lolli
+        ]
+
+        var partyOutput = ``
+
+        //process the otter/main structure [standard array]
+        for(let i = 0; i < party.length; i++)
+        {
+            //this loop controls which array value {object} we are looking at
+            partyOutput += `<h3>Party Member #${i}: ${party[i].name}</h3>`
+            party[i].greeting()
+
+            for(let key in party[i])
+
+            { 
+                //this loop goes through the individual objects at each position in the array; it will loop thru every KEY (property) that each object has
+                partyOutput += `<p><b>${key}:</b> ${party[i][key]} </p>`
+            }
+
+            partyOutput += `<hr>`
+
+        }
+
+        //write the info to the HTML
+        document.querySelector(`#output`).innerHTML += partyOutput
+
         //ADDING CONTENT TO HTML ON THIS PAGE
 
     </script>
